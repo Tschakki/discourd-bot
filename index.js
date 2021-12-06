@@ -15,9 +15,8 @@ client.once('ready', () => {
 client.on('interactionCreate', async interaction => {
 	if (!interaction.isCommand()) return;
 
-	const { commandName } = interaction;
-  const channel = client.channels.cache.get('906166177385046047');
-
+	//console.log('interaction: ', interaction);
+	const { commandName, channel } = interaction;
   let messages = [];
   let summary = "";
   let date;
